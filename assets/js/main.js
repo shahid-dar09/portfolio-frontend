@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = `
           <div class="card" data-aos="fade-up">
             <div class="card-inner">
-             <img src="${project.image_path}" alt="${project.title}" loading="lazy">
+              <img src="${project.image_path}" alt="${project.title}" loading="lazy">
               <div class="card-body">
                 <div class="card-title">${project.title}</div>
                 <div class="card-desc">${project.description}</div>
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "<p>Error loading projects.</p>";
     });
 });
+
 AOS.init({
   duration: 800,
   easing: 'slide',
