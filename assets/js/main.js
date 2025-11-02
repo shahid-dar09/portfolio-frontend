@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
- fetch("https://shahiddevportfolio.page.gd/get_projects.php")
-
+  fetch("https://shahiddevportfolio.page.gd/get_projects.php")
     .then(response => response.json())
     .then(data => {
       const projectsContainer = document.querySelector(".projects");
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="card" data-aos="fade-up">
             <div class="card-inner">
              <img src="${project.image_path}" alt="${project.title}" loading="lazy">
-
               <div class="card-body">
                 <div class="card-title">${project.title}</div>
                 <div class="card-desc">${project.description}</div>
