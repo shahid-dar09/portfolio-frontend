@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://shahiddevportfolio.page.gd/get_projects.php")
+  fetch("https://shahidportfolio.42web.io/get_projects.php")
     .then(response => response.json())
     .then(data => {
       const projectsContainer = document.querySelector(".projects");
