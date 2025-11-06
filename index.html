@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <title>Shahid Ahmad Dar | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shahid Ahmad Dar - Web Developer & Designer specializing in PHP, JavaScript, and MySQL."
+    />
+    <meta property="og:image" content="assets/images/shahid.jpg" />
+    <meta property="og:title" content="Shahid Ahmad Dar | Web Developer" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- AOS Animation CDN -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -17,31 +24,44 @@
 
   <body>
     <div id="particles-js"></div>
+    <div class="bg-blobs"></div>
 
     <!-- Navbar -->
-    <nav>
-      <div class="logo">Shahid</div>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">SHAHID</div>
+
+      <!-- Hamburger icon -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Dropdown menu -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="#image">Home</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
-     <li><a href="https://shahidportfolio.42web.io/login.php" target="_blank" rel="noopener noreferrer">
-  Admin Panel
-</a></li>
-
+        <li>
+          <a
+            href="https://shahidportfolio.42web.io/login.php"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Admin Panel
+          </a>
+        </li>
       </ul>
     </nav>
 
     <div id="image">
       <img src="assets/images/shahid.jpg" alt="Shahid Ahmad Dar" />
     </div>
+<header>
+  <h1 id="typewriter">SHAHID AHMAD DAR</h1>
+  <p>Web Developer & Designer | PHP, JavaScript, MySQL</p>
+</header>
 
-    <header>
-      <h1>SHAHID AHMAD DAR</h1>
-      <p>Web Developer & Designer | PHP, JavaScript, MySQL</p>
-    </header>
 
-    <section class="about">
+    <section class="about glass-box" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
         Hi, I'm <strong id="shahid">SHAHID AHMAD DAR</strong>, a passionate web
@@ -50,7 +70,54 @@
         MySQL to create dynamic applications, and I love crafting visually
         appealing designs using CSS and modern UI concepts.
       </p>
+      <div class="resume-btn">
+        <a href="assets/resume/Shahid_Ahmad_Dar_Resume.pdf" download>
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
     </section>
+    <!-- Tech Stack Section -->
+    <section class="tech-stack" data-aos="fade-up">
+      <h2>My Tech Stack</h2>
+      <div class="stack-icons">
+        <div>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="HTML"
+            title="HTML"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="CSS"
+            title="CSS"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript"
+            title="JavaScript"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+            alt="PHP"
+            title="PHP"
+          />
+        </div>
+        <div>
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+            alt="MySQL"
+            title="MySQL"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- Projects Section -->
     <section class="projects-section" id="projects">
       <h2
@@ -63,7 +130,7 @@
       <!-- JS will inject cards here -->
     </section>
 
-    <section class="contact" id="contact">
+    <section class="contact glass-box" id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/mwpbwqyl" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
@@ -73,15 +140,18 @@
       </form>
     </section>
 
-    <footer>
+    <footer class=" glass-box" data-aos="fade-up">
       <p>&copy; 2025 Shahid Ahmad Dar. All Rights Reserved.</p>
       <div class="social-links">
         <a href="https://github.com/shahid-dar09"
+             target="_blank"
           ><i class="fab fa-github"></i
         ></a>
-        <a href="https://linkedin.com/in/yourusername"
+        <a href="https://linkedin.com/in/dar-shahid-739571370/"
+             target="_blank"
           ><i class="fab fa-linkedin"></i
-        ></a>
+        >
+          </a>
         <a
           href="https://twitter.com/yourusername"
           target="_blank"
@@ -90,13 +160,31 @@
           <i class="fab fa-twitter"></i>
         </a>
         <a
-         href="https://instagram.com/yourusername"
+          href="https://www.instagram.com/i_m_shahid009/"
           target="_blank"
-          aria-label="Instagram">
+          aria-label="Instagram"
+        >
           <i class="fab fa-instagram"></i>
         </a>
       </div>
     </footer>
+
+    
+    <!-- 💬 Ask Shahid Chatbot -->
+<div id="chatbot">
+  <div id="chat-icon">💬</div>
+  <div id="chat-box">
+    <div id="chat-header">🤖 Ask Shahid</div>
+    <div id="chat-content">
+      <p class="bot-msg">Hey there! I'm Shahid's assistant. Ask me anything!</p>
+    </div>
+    <div id="chat-input-area">
+      <input type="text" id="chat-input" placeholder="Type a message..." />
+      <button id="chat-send">➤</button>
+    </div>
+  </div>
+</div>
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -105,7 +193,7 @@
 
     <script src="assets/js/particles.js"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main1.js"></script>
 
     <!-- FontAwesome for icons -->
     <script
